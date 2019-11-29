@@ -28,7 +28,7 @@ namespace Pszczolka
         private void Poziom_pierwszy_KeyDown(object sender, KeyEventArgs e)
         {
             pszczolka.ButtonDown(sender, e);
-            if (!wcisniety)//zapogieganie zapetlaniu sie animaacji, przez co wygladalo, ajkby pszczola stala w miejscu
+            if (!wcisniety)//zapogieganie zapetlaniu sie animacji, przez co wygladalo, jakby pszczola stala w miejscu
             {
                 pbPszczolka.Image = (Image)Properties.Resources.ResourceManager.GetObject(pszczolka.animacja);
                 wcisniety = true;
