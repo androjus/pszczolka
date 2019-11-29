@@ -25,7 +25,7 @@ namespace Pszczolka
             {
                 this.Hide();
                 Poziom_pierwszy poziom = new Poziom_pierwszy();
-                poziom.Closed += (s, args) => this.Close();// set scecond form as main and close first
+                poziom.Closed += (s, args) => this.Close();//wylaczenie menu powitalnego i wczytanie pierwszego poziomu
                 poziom.Show();
             }
         }

@@ -12,6 +12,7 @@ namespace Pszczolka
         bool wPrawo = false;
         bool wLewo = false;
         bool skok = false;
+        bool wcisniety = false;
         int szybkoscSkoku = 10;
         int szybkosc = 10;
         public string animacja = "prawa_s";
@@ -31,6 +32,7 @@ namespace Pszczolka
             {
                 skok = true;
             }
+
         }
         public void ButtonUp(object sender, KeyEventArgs e)
         {
@@ -51,7 +53,6 @@ namespace Pszczolka
         }
         public void Movment()
         {
-
         }
 
     }

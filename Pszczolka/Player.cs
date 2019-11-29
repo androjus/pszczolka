@@ -10,9 +10,6 @@ namespace Pszczolka
 {
     class Player:Controls
     {
-        bool wPrawo = false;
-        bool wLewo = false;
-        bool skok = false;
         int wynik = 0;
 
     }

@@ -40,6 +40,7 @@
             // 
             this.glownyTimer.Enabled = true;
             this.glownyTimer.Interval = 20;
+            this.glownyTimer.Tick += new System.EventHandler(this.glownyTimer_Tick);
             // 
             // pictureBox2
             // 

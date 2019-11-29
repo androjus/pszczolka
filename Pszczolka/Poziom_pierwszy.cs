@@ -12,6 +12,7 @@ namespace Pszczolka
 {
     public partial class Poziom_pierwszy : Form
     {
+        bool wcisniety = false;
         Player pszczolka = new Player();
         public Poziom_pierwszy()
         {
@@ -27,13 +28,24 @@ namespace Pszczolka
         private void Poziom_pierwszy_KeyDown(object sender, KeyEventArgs e)
         {
             pszczolka.ButtonDown(sender, e);
-            pbPszczolka.Image = (Image)Properties.Resources.ResourceManager.GetObject(pszczolka.animacja);
+            if (!wcisniety)//zapogieganie zapetlaniu sie animaacji, przez co wygladalo, ajkby pszczola stala w miejscu
+            {
+                pbPszczolka.Image = (Image)Properties.Resources.ResourceManager.GetObject(pszczolka.animacja);
+                wcisniety = true;
+            }
         }
 
         private void Poziom_pierwszy_KeyUp(object sender, KeyEventArgs e)
         {
             pszczolka.ButtonUp(sender, e);
             pbPszczolka.Image = (Image)Properties.Resources.ResourceManager.GetObject(pszczolka.animacja);
+            if (wcisniety) wcisniety = false;
         }
+
+        private void glownyTimer_Tick(object sender, EventArgs e)
+        {
+            pszczolka.Movment();
+        }
+
     }
 }
