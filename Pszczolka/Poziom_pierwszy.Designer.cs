@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Poziom_pierwszy));
             this.glownyTimer = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pbPszczolka = new System.Windows.Forms.PictureBox();
@@ -54,7 +55,7 @@
             // pbPszczolka
             // 
             this.pbPszczolka.Image = global::Pszczolka.Properties.Resources.prawa_s;
-            this.pbPszczolka.Location = new System.Drawing.Point(12, 320);
+            this.pbPszczolka.Location = new System.Drawing.Point(29, 557);
             this.pbPszczolka.Name = "pbPszczolka";
             this.pbPszczolka.Size = new System.Drawing.Size(85, 85);
             this.pbPszczolka.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -65,9 +66,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1924, 682);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pbPszczolka);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Poziom_pierwszy";
             this.Text = "Pszczolka";
             this.Load += new System.EventHandler(this.Poziom_pierwszy_Load);

@@ -7,14 +7,12 @@ using System.Windows.Forms;
 
 namespace Pszczolka
 {
-    class Controls
+    class Controls:iControls
     {
-        bool wPrawo = false;
-        bool wLewo = false;
+        PictureBox picBox = new PictureBox();
+        public bool wPrawo = false;
+        public bool wLewo = false;
         bool skok = false;
-        bool wcisniety = false;
-        int szybkoscSkoku = 10;
-        int szybkosc = 10;
         public string animacja = "prawa_s";
         public void ButtonDown(object sender, KeyEventArgs e)
         {
@@ -51,8 +49,17 @@ namespace Pszczolka
                 skok = false;
             }
         }
-        public void Movment()
+        public void Movment(Object Sender)
         {
+            picBox = (PictureBox)Sender;
+            if (wPrawo == true)
+            {
+                picBox.Left += 5;
+            }
+            if (wLewo == true)
+            {
+                picBox.Left -= 5;
+            }
         }
 
     }

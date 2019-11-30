@@ -44,7 +44,7 @@ namespace Pszczolka
 
         private void glownyTimer_Tick(object sender, EventArgs e)
         {
-            pszczolka.Movment();
+            pszczolka.Movment(pbPszczolka);
         }
 
     }

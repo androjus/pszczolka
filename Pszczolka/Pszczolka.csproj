@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls.cs" />
+    <Compile Include="iControls.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
