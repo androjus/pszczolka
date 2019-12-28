@@ -14,10 +14,17 @@ namespace Pszczolka
     {
         bool wcisniety = false;
         Player pszczolka = new Player();
+        List<Control> elementy = new List<Control>();
         public Poziom_pierwszy()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            pbPszczolka.BackColor = Color.Transparent;
+            pbUl.BackColor = Color.Transparent;
+            pbPszczolka.Parent = tlo;
+            pbUl.Parent = tlo;
+            elementy.Add(platforma1);
+            elementy.Add(platforma2);
         }
 
         private void Poziom_pierwszy_Load(object sender, EventArgs e)
@@ -44,7 +51,7 @@ namespace Pszczolka
 
         private void glownyTimer_Tick(object sender, EventArgs e)
         {
-            pszczolka.Movment(pbPszczolka);
+            pszczolka.Movment(pbPszczolka,elementy);
         }
 
     }

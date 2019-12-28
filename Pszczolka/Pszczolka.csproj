@@ -100,6 +100,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\ul.png" />
+    <None Include="Resources\0RI5Vpn.png" />
     <None Include="Resources\prawa_s.png" />
     <None Include="Resources\lewa_s.png" />
     <None Include="Resources\lewa.gif" />

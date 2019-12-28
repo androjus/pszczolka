@@ -9,10 +9,14 @@ namespace Pszczolka
 {
     class Controls:iControls
     {
-        PictureBox picBox = new PictureBox();
-        public bool wPrawo = false;
-        public bool wLewo = false;
-        bool skok = false;
+        protected PictureBox picBox = new PictureBox();
+        protected bool wPrawo = false;
+        protected bool wLewo = false;
+        protected bool wskoku = false;
+        protected bool wlocie = false;
+        protected int skok = 8;
+        protected int grawitacja = 6;
+        protected Control ostatni;
         public string animacja = "prawa_s";
         public void ButtonDown(object sender, KeyEventArgs e)
         {
@@ -26,9 +30,9 @@ namespace Pszczolka
                 wLewo = true;
                 animacja = "lewa";
             }
-            if (e.KeyCode == Keys.Space && !skok)
+            if (e.KeyCode == Keys.Space && !wskoku)
             {
-                skok = true;
+                wskoku = true;
             }
 
         }
@@ -44,21 +48,9 @@ namespace Pszczolka
                 wLewo = false;
                 animacja = "lewa_s";
             }
-            if (skok)
+            if (wskoku)
             {
-                skok = false;
-            }
-        }
-        public void Movment(Object Sender)
-        {
-            picBox = (PictureBox)Sender;
-            if (wPrawo == true)
-            {
-                picBox.Left += 5;
-            }
-            if (wLewo == true)
-            {
-                picBox.Left -= 5;
+                wskoku = false;
             }
         }
 
