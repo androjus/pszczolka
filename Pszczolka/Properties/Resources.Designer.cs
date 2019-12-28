@@ -63,16 +63,6 @@ namespace Pszczolka.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _0RI5Vpn {
-            get {
-                object obj = ResourceManager.GetObject("0RI5Vpn", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap lewa {
             get {
                 object obj = ResourceManager.GetObject("lewa", resourceCulture);
@@ -116,6 +106,16 @@ namespace Pszczolka.Properties {
         internal static System.Drawing.Bitmap prawa_s {
             get {
                 object obj = ResourceManager.GetObject("prawa_s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tlo_pierwszy {
+            get {
+                object obj = ResourceManager.GetObject("tlo_pierwszy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

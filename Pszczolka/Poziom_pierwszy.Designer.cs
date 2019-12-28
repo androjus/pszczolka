@@ -31,16 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Poziom_pierwszy));
             this.glownyTimer = new System.Windows.Forms.Timer(this.components);
+            this.platforma2 = new System.Windows.Forms.PictureBox();
+            this.pbPszczolka = new System.Windows.Forms.PictureBox();
             this.pbUl = new System.Windows.Forms.PictureBox();
             this.platforma1 = new System.Windows.Forms.PictureBox();
-            this.pbPszczolka = new System.Windows.Forms.PictureBox();
             this.tlo = new System.Windows.Forms.PictureBox();
-            this.platforma2 = new System.Windows.Forms.PictureBox();
+            this.lWynik = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.platforma2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPszczolka)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.platforma1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPszczolka)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.platforma2)).BeginInit();
             this.SuspendLayout();
             // 
             // glownyTimer
@@ -48,6 +49,27 @@
             this.glownyTimer.Enabled = true;
             this.glownyTimer.Interval = 20;
             this.glownyTimer.Tick += new System.EventHandler(this.glownyTimer_Tick);
+            // 
+            // platforma2
+            // 
+            this.platforma2.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.platforma2.Location = new System.Drawing.Point(235, 386);
+            this.platforma2.Name = "platforma2";
+            this.platforma2.Size = new System.Drawing.Size(200, 50);
+            this.platforma2.TabIndex = 4;
+            this.platforma2.TabStop = false;
+            this.platforma2.Tag = "platforma";
+            // 
+            // pbPszczolka
+            // 
+            this.pbPszczolka.BackColor = System.Drawing.Color.Black;
+            this.pbPszczolka.Image = global::Pszczolka.Properties.Resources.prawa_s;
+            this.pbPszczolka.Location = new System.Drawing.Point(46, 465);
+            this.pbPszczolka.Name = "pbPszczolka";
+            this.pbPszczolka.Size = new System.Drawing.Size(85, 85);
+            this.pbPszczolka.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPszczolka.TabIndex = 0;
+            this.pbPszczolka.TabStop = false;
             // 
             // pbUl
             // 
@@ -62,28 +84,17 @@
             // 
             // platforma1
             // 
-            this.platforma1.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.platforma1.Location = new System.Drawing.Point(0, 550);
+            this.platforma1.BackColor = System.Drawing.Color.Black;
+            this.platforma1.Location = new System.Drawing.Point(0, 546);
             this.platforma1.Name = "platforma1";
-            this.platforma1.Size = new System.Drawing.Size(1400, 50);
+            this.platforma1.Size = new System.Drawing.Size(1400, 54);
             this.platforma1.TabIndex = 1;
             this.platforma1.TabStop = false;
             this.platforma1.Tag = "platforma";
             // 
-            // pbPszczolka
-            // 
-            this.pbPszczolka.BackColor = System.Drawing.Color.Black;
-            this.pbPszczolka.Image = global::Pszczolka.Properties.Resources.prawa_s;
-            this.pbPszczolka.Location = new System.Drawing.Point(46, 465);
-            this.pbPszczolka.Name = "pbPszczolka";
-            this.pbPszczolka.Size = new System.Drawing.Size(85, 85);
-            this.pbPszczolka.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbPszczolka.TabIndex = 0;
-            this.pbPszczolka.TabStop = false;
-            // 
             // tlo
             // 
-            this.tlo.Image = global::Pszczolka.Properties.Resources._0RI5Vpn;
+            this.tlo.Image = global::Pszczolka.Properties.Resources.tlo_pierwszy;
             this.tlo.Location = new System.Drawing.Point(0, 0);
             this.tlo.Name = "tlo";
             this.tlo.Size = new System.Drawing.Size(1400, 600);
@@ -91,15 +102,17 @@
             this.tlo.TabIndex = 2;
             this.tlo.TabStop = false;
             // 
-            // platforma2
+            // lWynik
             // 
-            this.platforma2.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.platforma2.Location = new System.Drawing.Point(237, 413);
-            this.platforma2.Name = "platforma2";
-            this.platforma2.Size = new System.Drawing.Size(200, 50);
-            this.platforma2.TabIndex = 4;
-            this.platforma2.TabStop = false;
-            this.platforma2.Tag = "platforma";
+            this.lWynik.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lWynik.AutoSize = true;
+            this.lWynik.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lWynik.ForeColor = System.Drawing.Color.Gray;
+            this.lWynik.Location = new System.Drawing.Point(1255, 9);
+            this.lWynik.Name = "lWynik";
+            this.lWynik.Size = new System.Drawing.Size(124, 21);
+            this.lWynik.TabIndex = 5;
+            this.lWynik.Text = "Monety: 10";
             // 
             // Poziom_pierwszy
             // 
@@ -107,6 +120,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1391, 595);
+            this.Controls.Add(this.lWynik);
             this.Controls.Add(this.platforma2);
             this.Controls.Add(this.pbPszczolka);
             this.Controls.Add(this.pbUl);
@@ -118,11 +132,11 @@
             this.Load += new System.EventHandler(this.Poziom_pierwszy_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Poziom_pierwszy_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Poziom_pierwszy_KeyUp);
+            ((System.ComponentModel.ISupportInitialize)(this.platforma2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPszczolka)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.platforma1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPszczolka)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tlo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.platforma2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +150,6 @@
         private System.Windows.Forms.PictureBox pbUl;
         private System.Windows.Forms.PictureBox tlo;
         private System.Windows.Forms.PictureBox platforma2;
+        private System.Windows.Forms.Label lWynik;
     }
 }

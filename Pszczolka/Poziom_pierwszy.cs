@@ -23,6 +23,7 @@ namespace Pszczolka
             pbUl.BackColor = Color.Transparent;
             pbPszczolka.Parent = tlo;
             pbUl.Parent = tlo;
+            platforma1.BackColor = Color.FromArgb(151, 207, 39);
             elementy.Add(platforma1);
             elementy.Add(platforma2);
         }

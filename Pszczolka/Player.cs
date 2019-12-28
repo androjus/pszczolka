@@ -10,7 +10,7 @@ namespace Pszczolka
 {
     class Player:Controls
     {
-        int wynik = 0;
+        public int wynik = 0;
         public void Movment(Object Sender, List<Control> elementy)
         {
             picBox = (PictureBox)Sender;
@@ -42,7 +42,7 @@ namespace Pszczolka
             }
             foreach (Control x in elementy)
             {
-                if (x is PictureBox && x.Tag == "platforma")
+                if (x is PictureBox && x.Tag.ToString() == "platforma")
                 {
                     if (picBox.Bounds.IntersectsWith(x.Bounds) && !wskoku)
                     {
