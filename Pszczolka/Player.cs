@@ -11,7 +11,7 @@ namespace Pszczolka
     class Player:Controls
     {
         public int wynik = 0;
-        public void Movment(Object Sender, List<Control> elementy)
+        public void Movment(Object Sender, List<Control> elementy, int screenWidth)
         {
             picBox = (PictureBox)Sender;
             if (wlocie)
@@ -22,11 +22,11 @@ namespace Pszczolka
             {
                 wskoku = false;
             }
-            if (wPrawo)
+            if (wPrawo && picBox.Left<screenWidth-picBox.Width - 25)
             {
                 picBox.Left += 5;
             }
-            if (wLewo)
+            if (wLewo && picBox.Left>1)
             {
                 picBox.Left -= 5;
             }
@@ -42,15 +42,12 @@ namespace Pszczolka
             }
             foreach (Control x in elementy)
             {
-                if (x is PictureBox && x.Tag.ToString() == "platforma")
+                if (picBox.Bounds.IntersectsWith(x.Bounds) && !wskoku)
                 {
-                    if (picBox.Bounds.IntersectsWith(x.Bounds) && !wskoku)
-                    {
-                        grawitacja = 6;
-                        picBox.Top = x.Top - picBox.Height + 1;
-                        wlocie = false;
-                        ostatni = x;
-                    }
+                      grawitacja = 6;
+                      picBox.Top = x.Top - picBox.Height + 1;
+                      wlocie = false;
+                      ostatni = x;
                 }
 
             }

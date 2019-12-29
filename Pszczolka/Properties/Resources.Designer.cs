@@ -93,6 +93,26 @@ namespace Pszczolka.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap platforma_bg {
+            get {
+                object obj = ResourceManager.GetObject("platforma_bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap platforma_bgv2 {
+            get {
+                object obj = ResourceManager.GetObject("platforma_bgv2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap prawa {
             get {
                 object obj = ResourceManager.GetObject("prawa", resourceCulture);
@@ -107,6 +127,15 @@ namespace Pszczolka.Properties {
             get {
                 object obj = ResourceManager.GetObject("prawa_s", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.IO.UnmanagedMemoryStream podobny do zasobu System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream techno {
+            get {
+                return ResourceManager.GetStream("techno", resourceCulture);
             }
         }
         

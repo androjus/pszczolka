@@ -101,6 +101,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\techno.wav" />
+    <None Include="Resources\platforma_bgv2.png" />
+    <None Include="Resources\platforma_bg.png" />
     <None Include="Resources\tlo_pierwszy.png" />
     <None Include="Resources\ul.png" />
     <None Include="Resources\prawa_s.png" />

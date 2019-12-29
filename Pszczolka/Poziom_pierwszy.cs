@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Pszczolka
 {
@@ -23,9 +24,13 @@ namespace Pszczolka
             pbUl.BackColor = Color.Transparent;
             pbPszczolka.Parent = tlo;
             pbUl.Parent = tlo;
-            platforma1.BackColor = Color.FromArgb(151, 207, 39);
             elementy.Add(platforma1);
             elementy.Add(platforma2);
+            elementy.Add(platforma3);
+            elementy.Add(platforma4);
+            elementy.Add(platforma5);
+            elementy.Add(platforma6);
+            elementy.Add(platforma7);
         }
 
         private void Poziom_pierwszy_Load(object sender, EventArgs e)
@@ -52,7 +57,7 @@ namespace Pszczolka
 
         private void glownyTimer_Tick(object sender, EventArgs e)
         {
-            pszczolka.Movment(pbPszczolka,elementy);
+            pszczolka.Movment(pbPszczolka,elementy,this.Width);
         }
 
     }
