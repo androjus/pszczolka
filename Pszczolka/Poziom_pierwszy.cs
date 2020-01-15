@@ -24,6 +24,12 @@ namespace Pszczolka
             pbUl.BackColor = Color.Transparent;
             pbPszczolka.Parent = tlo;
             pbUl.Parent = tlo;
+
+
+            
+
+           // this.Controls.
+
             elementy.Add(platforma1);
             elementy.Add(platforma2);
             elementy.Add(platforma3);
@@ -33,9 +39,16 @@ namespace Pszczolka
             elementy.Add(platforma7);
         }
 
+        //coiny
+        int wyn=0;
+        PictureBox[] coins = new PictureBox[4];
         private void Poziom_pierwszy_Load(object sender, EventArgs e)
         {
-
+            lWynik.Text = "Monety:" + wyn.ToString();
+            coins[0] = pbCoin1;
+            coins[1] = pbCoin2;
+            coins[2] = pbCoin3;
+            coins[3] = pbCoin4;
         }
 
         private void Poziom_pierwszy_KeyDown(object sender, KeyEventArgs e)
@@ -57,7 +70,19 @@ namespace Pszczolka
 
         private void glownyTimer_Tick(object sender, EventArgs e)
         {
-            pszczolka.Movment(pbPszczolka,elementy,this.Width);
+            pszczolka.Movment(pbPszczolka, this, this.Width);
+            
+            //zbieranie coinów
+            for(int i=0; i<coins.Length;i++)
+            {
+                if (pbPszczolka.Bounds.IntersectsWith(coins[i].Bounds) && coins[i].Visible)
+                {
+                    coins[i].Hide();
+                    wyn++;
+                    lWynik.Text = "Monety:" + wyn.ToString();
+                }
+
+            }
         }
 
     }

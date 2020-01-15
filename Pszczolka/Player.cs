@@ -8,12 +8,15 @@ using System.Windows.Forms;
 
 namespace Pszczolka
 {
-    class Player:Controls
+    class Player : Controls
     {
         public int wynik = 0;
-        public void Movment(Object Sender, List<Control> elementy, int screenWidth)
+        public void Movment(Object Sender, Form form, int screenWidth)
         {
-            picBox = (PictureBox)Sender;
+            picBox = Sender as PictureBox;
+            if (picBox == null)
+                return;
+
             if (wlocie)
             {
                 picBox.Top += skok;
@@ -22,11 +25,11 @@ namespace Pszczolka
             {
                 wskoku = false;
             }
-            if (wPrawo && picBox.Left<screenWidth-picBox.Width - 25)
+            if (wPrawo && picBox.Left < screenWidth - picBox.Width - 25)
             {
                 picBox.Left += 5;
             }
-            if (wLewo && picBox.Left>1)
+            if (wLewo && picBox.Left > 1)
             {
                 picBox.Left -= 5;
             }
@@ -40,17 +43,35 @@ namespace Pszczolka
             {
                 skok = 8;
             }
-            foreach (Control x in elementy)
+
+            foreach (Control x in form.Controls)
             {
+                if (x.Tag != "platforma")
+                    continue;
+
                 if (picBox.Bounds.IntersectsWith(x.Bounds) && !wskoku)
                 {
-                      grawitacja = 6;
-                      picBox.Top = x.Top - picBox.Height + 1;
-                      wlocie = false;
-                      ostatni = x;
+                    grawitacja = 6;
+                    picBox.Top = x.Top - picBox.Height + 1;
+                    wlocie = false;
+                    ostatni = x;
                 }
 
+
             }
+
+
+            //foreach (Control x in elementy)
+            //{
+            //    if (picBox.Bounds.IntersectsWith(x.Bounds) && !wskoku)
+            //    {
+            //        grawitacja = 6;
+            //        picBox.Top = x.Top - picBox.Height + 1;
+            //        wlocie = false;
+            //        ostatni = x;
+            //    }
+
+            //}
             if (ostatni != null)
             {
                 if (!picBox.Bounds.IntersectsWith(ostatni.Bounds) && !wskoku)
@@ -60,6 +81,10 @@ namespace Pszczolka
             }
 
         }
+
+
+
+
 
     }
 }

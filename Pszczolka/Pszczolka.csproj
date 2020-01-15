@@ -101,6 +101,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <Content Include="Resources\coin.png" />
+    <None Include="Resources\coin1.png" />
     <None Include="Resources\techno.wav" />
     <None Include="Resources\platforma_bgv2.png" />
     <None Include="Resources\platforma_bg.png" />
