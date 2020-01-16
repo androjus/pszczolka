@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="aPlayer.cs" />
     <Compile Include="Controls.cs" />
     <Compile Include="iControls.cs" />
     <Compile Include="Koniec.cs">

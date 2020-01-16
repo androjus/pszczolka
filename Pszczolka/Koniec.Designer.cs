@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Koniec));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@
             this.BackgroundImage = global::Pszczolka.Properties.Resources.koniec1;
             this.ClientSize = new System.Drawing.Size(930, 553);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Koniec";
             this.Text = "Koniec";
             this.Load += new System.EventHandler(this.Koniec_Load);
