@@ -52,6 +52,12 @@
     <Compile Include="aPlayer.cs" />
     <Compile Include="Controls.cs" />
     <Compile Include="iControls.cs" />
+    <Compile Include="Koniec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Koniec.Designer.cs">
+      <DependentUpon>Koniec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,19 +65,40 @@
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Player.cs" />
+    <Compile Include="Poziom_drugi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Poziom_drugi.Designer.cs">
+      <DependentUpon>Poziom_drugi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Poziom_pierwszy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Poziom_pierwszy.Designer.cs">
       <DependentUpon>Poziom_pierwszy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Poziom_trzeci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Poziom_trzeci.Designer.cs">
+      <DependentUpon>Poziom_trzeci.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Koniec.resx">
+      <DependentUpon>Koniec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Poziom_drugi.resx">
+      <DependentUpon>Poziom_drugi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Poziom_pierwszy.resx">
       <DependentUpon>Poziom_pierwszy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Poziom_trzeci.resx">
+      <DependentUpon>Poziom_trzeci.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -102,6 +129,8 @@
   <ItemGroup>
     <Content Include="icon.ico" />
     <Content Include="Resources\coin.png" />
+    <None Include="Resources\koniec1.png" />
+    <None Include="Resources\koniec.png" />
     <None Include="Resources\coin1.png" />
     <None Include="Resources\techno.wav" />
     <None Include="Resources\platforma_bgv2.png" />
